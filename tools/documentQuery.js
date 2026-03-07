@@ -27,7 +27,7 @@ export async function handleDocumentQuery(args) {
   }
 
   try {
-    const response = await axios.post(`${apiUrl}/document/query`, {
+    const response = await axios.post(`${apiUrl}/documents/query`, {
       query: query,
     });
 
