@@ -19,7 +19,7 @@ app.use((req, res, next) => {
   console.log(req.method, req.url);
   next();
 });
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 // Store transports by session ID
 const transports = new Map();

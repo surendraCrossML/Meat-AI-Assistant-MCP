@@ -3,13 +3,13 @@ import axios from "axios";
 export const documentQueryTool = {
   name: "document_query",
   description:
-    "Search internal documents using natural language and return an AI-generated answer.",
+    "End-to-end knowledge retrieval tool. Provide a natural language question, and it will: 1) use an AI model to extract optimal search keywords, 2) search the internal database for matching documents, 3) download the actual internal document contents from secure S3 storage in parallel, and 4) use a powerful AI (Gemini) to read those documents and summarize a precise, grounded answer. Use this for ANY question regarding internal rules, recipes, cooking guides, or domain-specific documentation.",
   inputSchema: {
     type: "object",
     properties: {
       query: {
         type: "string",
-        description: "Natural language question about documents",
+        description: "Your raw, natural language question (e.g., 'What are the best beef recipes for a healthy diet?')",
       },
     },
     required: ["query"],
